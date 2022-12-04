@@ -3,6 +3,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
 module.exports = {
+  entry: '../src/index.ts',
+  loader: 'ts-loader',
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -31,6 +34,10 @@ module.exports = {
       '@components': path.resolve(__dirname, '../src/components/'),
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.css'],
+  },
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, '../dist'),
   },
   webpackFinal: async (config) => {
     config.resolve.plugins = [
