@@ -1,5 +1,5 @@
 {
-  "include": ["src"],
+  "include": ["src", "src/components"],
   "exclude": ["src/stories", "src/storybook"],
   "compilerOptions": {
     "baseUrl": "./src",

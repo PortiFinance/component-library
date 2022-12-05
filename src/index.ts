@@ -1,3 +1,3 @@
-export { Button } from './components/Button'
-export { Header } from './components/Header'
-export { Page } from './components/Page'
+export * from './components/Button'
+export * from './components/Header'
+export * from './components/Page'
